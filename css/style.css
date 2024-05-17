@@ -1,0 +1,235 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #0f0f0f;
+}
+body main section {
+  height: 615px;
+  background-image: url("../../assets/Event1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*MAIN CENTRED SEARCH TAB*/
+}
+.having {
+  font-family: "Encode Sans SC", sans-serif;
+  @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100..900&display=swap");
+  color: aliceblue;
+  display: flex;
+  margin: auto;
+  padding: 182px 682px 50px 366px;
+  font-size: 36px;
+  font-weight: 700;
+  width: 316px;
+}
+body main section .searchtab {
+  margin: auto;
+  margin-bottom: 450px;
+  background-color: #ffffff;
+  width: 708px;
+  height: 95px;
+  border-radius: 15px;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-box-shadow: 4px 6px 0px 4px rgb(229, 248, 118);
+  -moz-box-shadow: 4px 6px 0px 4px rgb(229, 248, 118);
+  box-shadow: 4px 6px 0px 4px rgb(229, 248, 118);
+}
+.searchtab div {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 10px;
+  /*BUTTONS FOR SEARCH INPUT*/
+}
+.search {
+  padding-left: 15px;
+  padding-bottom: 15px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  color: black;
+}
+.citycategory {
+  width: 200px;
+  height: 35px;
+  margin-left: 15px;
+  background-color: #ffffff;
+  color: #bbbbbb;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  cursor: pointer;
+}
+.date {
+  height: 35px;
+  width: 120px;
+  margin-left: 15px;
+  padding-left: 15px;
+  background-color: #ffffff;
+  color: #bbbbbb;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  cursor: pointer;
+}
+/*NAV*/
+nav {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.logonav {
+  display: flex;
+  margin: 12px;
+}
+.logo {
+  width: 24px;
+  height: 14px;
+  padding: 15px;
+}
+.brandname {
+  margin: auto;
+  font-size: 24px;
+  font-family: "Jersey 15";
+  color: #ffffff;
+}
+.rightnav ul {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .rightnav ul li {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+nav .rightnav ul li .profile {
+  height: 25px;
+  width: 25px;
+  text-decoration: none;
+  cursor: pointer;
+}
+nav .rightnav ul li .lenguage {
+  width: 60px;
+  height: 22px;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*CARROUSEL*/
+.divcarrousel {
+  margin-top: 60px;
+}
+.divcarrousel .carrouselh {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  padding-left: 150px;
+  padding-right: 150px;
+  align-items: center;
+}
+.divcarrousel .carrouselh h1 {
+  font-family: "Encode Sans SC", sans-serif;
+  @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100..900&display=swap");
+  font-size: 32px;
+  color: #ffffff;
+}
+.divcarrousel .carrouselh a {
+  font-family: "Encode Sans SC", sans-serif;
+  @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100..900&display=swap");
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.divcarrousel .carrousel {
+  overflow: hidden;
+  position: relative;
+}
+.divcarrousel .carrousel .imgcarrousel {
+  display: flex;
+}
+.divcarrousel .carrousel .imgcarrousel .card {
+  margin-left: 150px;
+  margin-top: 65px;
+  display: flex;
+  flex-direction: column;
+  width: 415px;
+  height: 354px;
+  cursor: pointer;
+  -webkit-box-shadow: 6px 8px 0px 8px rgb(233, 183, 69);
+  -moz-box-shadow: 6px 8px 0px 8px rgb(233, 183, 69);
+  box-shadow: 6px 8x 0px 8px rgb(233, 183, 69);
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+.divcarrousel .carrousel .imgcarrousel .card img {
+  border-radius: 15px;
+  width: 415px;
+  height: 240px;
+}
+.divcarrousel .carrousel .imgcarrousel .card div {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 5px 25px 5px;
+}
+.divcarrousel .carrousel .imgcarrousel .card div h {
+  font-family: "VT323", monospace;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 32px;
+}
+.divcarrousel .carrousel .imgcarrousel .card div a {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+/*CARD SHADOWS*/
+.divcarrousel .carrousel .imgcarrousel .zevra {
+  margin-left: 50px;
+  -webkit-box-shadow: 6px 8px 0px 8px rgb(222, 56, 121);
+  -moz-box-shadow: 6px 8px 0px 8px rgb(222, 56, 121);
+  box-shadow: 6px 8px 0px 8px rgb(222, 56, 121);
+}
+.divcarrousel .carrousel .imgcarrousel .diasdecampo {
+  margin-left: 50px;
+  -webkit-box-shadow: 6px 8px 0px 8px rgb(251, 162, 65);
+  -moz-box-shadow: 6px 8px 0px 8px rgb(251, 162, 65);
+  box-shadow: 6px 8px 0px 8px rgb(251, 162, 65);
+}
+.divcarrousel .carrousel .imgcarrousel .medusafestival {
+  -webkit-box-shadow: 6px 8px 0px 8px rgb(254, 228, 181);
+  -moz-box-shadow: 6px 8px 0px 8px rgb(254, 228, 181);
+  box-shadow: 6px 8px 0px 8px rgb(251, 162, 65);
+}
+.divcarrousel .carrousel .imgcarrousel .oaks {
+  -webkit-box-shadow: 6px 8px 0px 8px rgb(4, 119, 251);
+  -moz-box-shadow: 6px 8px 0px 8px rgb(4, 119, 251);
+  box-shadow: 6px 8px 0px 8px rgb(4, 119, 251);
+}
+.divcarrousel .carrousel .imgcarrousel .sparks {
+  margin-left: 50px;
+}
+.divcarrousel .carrousel .imgcarrousel .oven {
+  margin-left: 50px;
+  -webkit-box-shadow: 6px 8px 0px 8px rgb(255, 255, 255);
+  -moz-box-shadow: 6px 8px 0px 8px rgb(255, 255, 255);
+  box-shadow: 6px 8px 0px 8px rgb(255, 255, 255);
+}
+.divcarrousel .carrousel .imgcarrousel .gordo {
+  margin-left: 50px;
+  -webkit-box-shadow: 6px 8px 0px 8px rgb(229, 229, 229);
+  -moz-box-shadow: 4px 6px 0px 4px rgb(229, 229, 229);
+  box-shadow: 4px 6px 0px 4px rgb(229, 229, 229);
+}

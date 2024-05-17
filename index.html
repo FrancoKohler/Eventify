@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventify |</title>
+
+    <!--LINK CSS-->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./fonts/stylesheet.css" />
+
+    <!--LINK GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Jersey+10&family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <!--LINK SCRIPT CSS-->
+  <script src="./Javascript/index.js"></script>
+  <body>
+    <nav>
+      <div class="logonav">
+        <img class="logo" src="./assets/Eventify Logo (2).png" alt="logo" />
+        <a class="brandname">Eventify</a>
+      </div>
+      <div class="rightnav">
+        <ul>
+          <li>
+            <img class="profile" src="./assets/Profile.png" alt="Profile" />
+          </li>
+          <li><img class="lenguage" src="./assets/ENG FLAG.png" /></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <!--Top Section with chaging BG-->
+      <section>
+        <header class="having">Having fun was never this easy!</header>
+
+        <div class="searchtab">
+          <div>
+            <a class="search">City</a>
+            <button class="citycategory"><a>--Valencia--</a></button>
+          </div>
+          <div>
+            <a class="search">Category</a>
+            <button class="citycategory"><a>--Select Category--</a></button>
+          </div>
+          <div>
+            <label class="search" for="start">Start date:</label>
+
+            <input
+              class="date"
+              type="date"
+              id="start"
+              name="trip-start"
+              value="2024-04-25"
+              min="2024-02-01"
+              max="2026-10-31"
+            />
+          </div>
+        </div>
+      </section>
+      <!--FIRST CARROUSEL-->
+
+      <div class="divcarrousel">
+        <div class="carrouselh">
+          <h1>Trending Events</h1>
+          <a href="#">See All..</a>
+        </div>
+        <div class="carrousel">
+          <div class="imgcarrousel">
+            <!--1°IMG-->
+            <div class="card">
+              <img
+                href="#"
+                src="./assets/SpookSparks.webp"
+                alt="Charlie Sparks"
+              />
+              <div>
+                <h>Charlie Sparks in SPOOK CLUB</h>
+                <a>Sat. 27/04/24 | 23:00-7:30</a>
+              </div>
+            </div>
+
+            <!--2°IMG-->
+            <div class="card zevra">
+              <img
+                href="#"
+                src="./assets/ZevraFestival.png"
+                alt="Zevra Festival"
+              />
+              <div>
+                <h>Zevra Festival in CULLERA</h>
+                <a>Fri.19/08/24 - Mon.22/08/24 </a>
+              </div>
+            </div>
+
+            <!--3°IMG-->
+            <div class="card diasdecampo">
+              <img
+                href="#"
+                src="./assets/Diasdecampo.jpg"
+                alt="Dias de Campo"
+              />
+              <div>
+                <h>Días de Campo in MONTANEJOS</h>
+                <a>Thu. 16/05/24 | 18:00-23:59</a>
+              </div>
+            </div>
+
+            <!--4°IMG-->
+            <div class="card medusafestival">
+              <img
+                href="#"
+                src="./assets/Medusafestival.jpg"
+                alt="Medusa Festival"
+              />
+              <div>
+                <h>Medusa Festival in CULLERA</h>
+                <a>Fri.09/08/24- Mon.12/08/24 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--SECOND CARROUSEL-->
+
+      <div class="divcarrousel">
+        <div class="carrouselh">
+          <h1>Electronic Music This Weekend</h1>
+          <a href="#">See All..</a>
+        </div>
+        <div class="carrousel">
+          <div class="imgcarrousel">
+            <!--1°IMG-->
+            <div class="card oaks">
+              <img href="#" src="./assets/OAKS.jpg" alt="hector oaks" />
+              <div>
+                <h>Hector Oaks in BARRACA</h>
+                <a>Sat. 27/04/24 | 23:00-7:30</a>
+              </div>
+            </div>
+
+            <!--2°IMG-->
+            <div class="card sparks">
+              <img href="#" src="./assets/SpookSparks.webp" alt="Spook Flyer" />
+              <div>
+                <h>Charlie Sparks in SPOOK CLUB</h>
+                <a>Sat. 27/04/24 | 23:00-7:30</a>
+              </div>
+            </div>
+
+            <!--3°IMG-->
+            <div class="card oven">
+              <img href="#" src="./assets/oven.png" alt="Oven Club" />
+              <div>
+                <h>OVEN Club in Valencia</h>
+                <a>Fri. 26/04/24 | 23:00 - 7:30</a>
+              </div>
+            </div>
+
+            <!--4°IMG-->
+            <div class="card gordo">
+              <img href="#" src="./assets/gordo.jpg" alt="Gordo Latex Club" />
+              <div>
+                <h>Medusa Festival in CULLERA</h>
+                <a>Fri.09/08/24- Mon.12/08/24 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
