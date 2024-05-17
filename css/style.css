@@ -9,9 +9,9 @@ body {
 }
 body main section {
   height: 615px;
-  background-image: url("../../assets/Event1.png");
   background-size: cover;
   background-repeat: no-repeat;
+  transition: background-image 1200ms ease-in;
   /*MAIN CENTRED SEARCH TAB*/
 }
 .having {
@@ -54,12 +54,13 @@ body main section .searchtab {
   font-size: 16px;
   color: black;
 }
-.citycategory {
+.city {
   width: 200px;
   height: 35px;
   margin-left: 15px;
+  padding-left: 15px;
   background-color: #ffffff;
-  color: #bbbbbb;
+  color: #000000;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   cursor: pointer;
@@ -70,7 +71,7 @@ body main section .searchtab {
   margin-left: 15px;
   padding-left: 15px;
   background-color: #ffffff;
-  color: #bbbbbb;
+  color: #000000;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   cursor: pointer;
@@ -121,12 +122,51 @@ nav .rightnav ul li .profile {
   text-decoration: none;
   cursor: pointer;
 }
-nav .rightnav ul li .lenguage {
+/*DROPDOWN LENGUAGE ICON*/
+.showicon {
+  margin-right: 15px;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.lenguage {
   width: 60px;
-  height: 22px;
+  height: 20px;
   text-decoration: none;
   cursor: pointer;
 }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #070707;
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #d9ff02;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /*CARROUSEL*/
 .divcarrousel {
   margin-top: 60px;

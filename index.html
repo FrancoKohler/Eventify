@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/LogoHTML.png"
+      type="image/x-icon"
+    />
     <title>Eventify |</title>
 
     <!--LINK CSS-->
@@ -19,11 +24,11 @@
   </head>
 
   <!--LINK SCRIPT CSS-->
-  <script src="./Javascript/index.js"></script>
+  <script defer src="./app/index.js"></script>
   <body>
     <nav>
       <div class="logonav">
-        <img class="logo" src="./assets/Eventify Logo (2).png" alt="logo" />
+        <img class="logo" src="./assets/Eventify Logo.png" alt="logo" />
         <a class="brandname">Eventify</a>
       </div>
       <div class="rightnav">
@@ -31,26 +36,93 @@
           <li>
             <img class="profile" src="./assets/Profile.png" alt="Profile" />
           </li>
-          <li><img class="lenguage" src="./assets/ENG FLAG.png" /></li>
+          <li>
+            <div class="dropdown">
+              <button class="showicon">
+                <img
+                  class="lenguage"
+                  src="./assets/ENG FRAME.png"
+                  alt="english flag"
+                />
+              </button>
+              <div class="dropdown-content">
+                <a href="#">
+                  <img
+                    class="lenguage"
+                    src="./assets/ENG FRAME.png"
+                    alt="english flag"
+                /></a>
+                <a href="#">
+                  <img
+                    class="lenguage"
+                    src="./assets/ESP FRAME.png"
+                    alt="spanish flag"
+                /></a>
+                <a href="#">
+                  <img
+                    class="lenguage"
+                    src="./assets/DEU FRAM.png"
+                    alt="german flag"
+                /></a>
+              </div>
+            </div>
+          </li>
+          <!-- <li>
+            <a href="#"
+              ><img
+                class="lenguage showicon"
+                src="./assets/ENG FRAME.png"
+                alt="english flag"
+                id="dropdownImage"
+            /></a>
+            <div class="dropdown-content" id="dropdownContent">
+              <a href="#"
+                ><img
+                  class="lenguage"
+                  src="./assets/ENG FRAME.png"
+                  alt="english flag"
+              /></a>
+              <a href="#"
+                ><img
+                  class="lenguage"
+                  src="./assets/ESP FRAME.png"
+                  alt="spanish flag"
+              /></a>
+              <a href="#"
+                ><img
+                  class="lenguage"
+                  src="./assets/DEU FRAM.png"
+                  alt="german flag"
+              /></a>
+            </div>
+          </li> -->
         </ul>
       </div>
     </nav>
     <main>
       <!--Top Section with chaging BG-->
-      <section>
+      <section id="section">
         <header class="having">Having fun was never this easy!</header>
 
         <div class="searchtab">
           <div>
-            <a class="search">City</a>
-            <button class="citycategory"><a>--Valencia--</a></button>
+            <label for="city" class="search">City</label>
+            <select name="city" id="city" class="city">
+              <option value="valencia">Valencia</option>
+              <option value="barcelona">Barcelona</option>
+              <option value="madrid">Madrid</option>
+              <option value="lisboa">Lisboa</option>
+            </select>
           </div>
           <div>
             <a class="search">Category</a>
-            <button class="citycategory"><a>--Select Category--</a></button>
+            <select name="city" id="city" class="city">
+              <option value="electronic">Electronic Music</option>
+              <option value="art">Art, Museums and Culture</option>
+            </select>
           </div>
           <div>
-            <label class="search" for="start">Start date:</label>
+            <a class="search" for="start">Start date</a>
 
             <input
               class="date"
