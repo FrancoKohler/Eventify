@@ -8,7 +8,7 @@
       href="./assets/LogoHTML.png"
       type="image/x-icon"
     />
-    <title>Eventify |</title>
+    <title>Eventify | Optimizing your time</title>
 
     <!--LINK CSS-->
     <link rel="stylesheet" href="./css/style.css" />
@@ -21,24 +21,30 @@
       href="https://fonts.googleapis.com/css2?family=Audiowide&family=Jersey+10&family=Press+Start+2P&family=VT323&display=swap"
       rel="stylesheet"
     />
+    <!--SWEET ALERT-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
 
   <!--LINK SCRIPT CSS-->
+  <script defer src="./app/data.js"></script>
   <script defer src="./app/index.js"></script>
+  <script defer src="./app/eventsdata.js"></script>
   <body>
     <nav>
       <div class="logonav">
-        <img class="logo" src="./assets/Eventify Logo.png" alt="logo" />
-        <a class="brandname">Eventify</a>
+        <a href="#section">
+          <img class="logo" src="./assets/fullbrand.png" alt="Eventify Logo" />
+        </a>
       </div>
       <div class="rightnav">
         <ul>
           <li>
             <img class="profile" src="./assets/Profile.png" alt="Profile" />
           </li>
+          <!--DROPDOWN FOR LANGUAGE-->
           <li>
             <div class="dropdown">
-              <button class="showicon">
+              <button class="showicon" id="showicon">
                 <img
                   class="lenguage"
                   src="./assets/ENG FRAME.png"
@@ -51,59 +57,33 @@
                     class="lenguage"
                     src="./assets/ENG FRAME.png"
                     alt="english flag"
-                /></a>
+                  />
+                </a>
                 <a href="#">
                   <img
                     class="lenguage"
                     src="./assets/ESP FRAME.png"
                     alt="spanish flag"
-                /></a>
+                  />
+                </a>
                 <a href="#">
                   <img
                     class="lenguage"
                     src="./assets/DEU FRAM.png"
                     alt="german flag"
-                /></a>
+                  />
+                </a>
               </div>
             </div>
           </li>
-          <!-- <li>
-            <a href="#"
-              ><img
-                class="lenguage showicon"
-                src="./assets/ENG FRAME.png"
-                alt="english flag"
-                id="dropdownImage"
-            /></a>
-            <div class="dropdown-content" id="dropdownContent">
-              <a href="#"
-                ><img
-                  class="lenguage"
-                  src="./assets/ENG FRAME.png"
-                  alt="english flag"
-              /></a>
-              <a href="#"
-                ><img
-                  class="lenguage"
-                  src="./assets/ESP FRAME.png"
-                  alt="spanish flag"
-              /></a>
-              <a href="#"
-                ><img
-                  class="lenguage"
-                  src="./assets/DEU FRAM.png"
-                  alt="german flag"
-              /></a>
-            </div>
-          </li> -->
         </ul>
       </div>
     </nav>
     <main>
-      <!--Top Section with chaging BG-->
+      <!--Top Section with changing BG-->
       <section id="section">
         <header class="having">Having fun was never this easy!</header>
-
+        <!--SEARCHING TAB-->
         <div class="searchtab">
           <div>
             <label for="city" class="search">City</label>
@@ -112,18 +92,19 @@
               <option value="barcelona">Barcelona</option>
               <option value="madrid">Madrid</option>
               <option value="lisboa">Lisboa</option>
+              <option value="berlin">Berlin</option>
+              <option value="dublin">Dublin</option>
             </select>
           </div>
           <div>
-            <a class="search">Category</a>
-            <select name="city" id="city" class="city">
+            <label for="category" class="search">Category</label>
+            <select name="category" id="category" class="city">
               <option value="electronic">Electronic Music</option>
               <option value="art">Art, Museums and Culture</option>
             </select>
           </div>
           <div>
-            <a class="search" for="start">Start date</a>
-
+            <label for="start" class="search">Start date</label>
             <input
               class="date"
               type="date"
@@ -135,118 +116,192 @@
             />
           </div>
         </div>
+        <button class="gosearch">GO</button>
       </section>
-      <!--FIRST CARROUSEL-->
-
-      <div class="divcarrousel">
-        <div class="carrouselh">
-          <h1>Trending Events</h1>
-          <a href="#">See All..</a>
+      <!--FIRST CAROUSEL-->
+      <div class="carouselh">
+        <h1 class="trending">Trending Events</h1>
+        <a class="seeall" href="#">See All..</a>
+      </div>
+      <div class="slidecarousel">
+        <div class="divcarousel" id="divcarousel" data-events-id="1">
+          <!--JS FOR CARDS-->
         </div>
-        <div class="carrousel">
-          <div class="imgcarrousel">
-            <!--1°IMG-->
-            <div class="card">
-              <img
-                href="#"
-                src="./assets/SpookSparks.webp"
-                alt="Charlie Sparks"
-              />
-              <div>
-                <h>Charlie Sparks in SPOOK CLUB</h>
-                <a>Sat. 27/04/24 | 23:00-7:30</a>
-              </div>
-            </div>
-
-            <!--2°IMG-->
-            <div class="card zevra">
-              <img
-                href="#"
-                src="./assets/ZevraFestival.png"
-                alt="Zevra Festival"
-              />
-              <div>
-                <h>Zevra Festival in CULLERA</h>
-                <a>Fri.19/08/24 - Mon.22/08/24 </a>
-              </div>
-            </div>
-
-            <!--3°IMG-->
-            <div class="card diasdecampo">
-              <img
-                href="#"
-                src="./assets/Diasdecampo.jpg"
-                alt="Dias de Campo"
-              />
-              <div>
-                <h>Días de Campo in MONTANEJOS</h>
-                <a>Thu. 16/05/24 | 18:00-23:59</a>
-              </div>
-            </div>
-
-            <!--4°IMG-->
-            <div class="card medusafestival">
-              <img
-                href="#"
-                src="./assets/Medusafestival.jpg"
-                alt="Medusa Festival"
-              />
-              <div>
-                <h>Medusa Festival in CULLERA</h>
-                <a>Fri.09/08/24- Mon.12/08/24 </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <button class="prev-btn" id="prev-btn">
+          <img class="arrow" src="./assets/arrowback.png" alt="arrowback" />
+        </button>
+        <button class="next-btn" id="next-btn">
+          <img class="arrow" src="./assets/arrowfoward.png" alt="arrowfoward" />
+        </button>
       </div>
 
-      <!--SECOND CARROUSEL-->
-
-      <div class="divcarrousel">
-        <div class="carrouselh">
-          <h1>Electronic Music This Weekend</h1>
-          <a href="#">See All..</a>
-        </div>
-        <div class="carrousel">
-          <div class="imgcarrousel">
-            <!--1°IMG-->
-            <div class="card oaks">
-              <img href="#" src="./assets/OAKS.jpg" alt="hector oaks" />
-              <div>
-                <h>Hector Oaks in BARRACA</h>
-                <a>Sat. 27/04/24 | 23:00-7:30</a>
-              </div>
-            </div>
-
-            <!--2°IMG-->
-            <div class="card sparks">
-              <img href="#" src="./assets/SpookSparks.webp" alt="Spook Flyer" />
-              <div>
-                <h>Charlie Sparks in SPOOK CLUB</h>
-                <a>Sat. 27/04/24 | 23:00-7:30</a>
-              </div>
-            </div>
-
-            <!--3°IMG-->
-            <div class="card oven">
-              <img href="#" src="./assets/oven.png" alt="Oven Club" />
-              <div>
-                <h>OVEN Club in Valencia</h>
-                <a>Fri. 26/04/24 | 23:00 - 7:30</a>
-              </div>
-            </div>
-
-            <!--4°IMG-->
-            <div class="card gordo">
-              <img href="#" src="./assets/gordo.jpg" alt="Gordo Latex Club" />
-              <div>
-                <h>Medusa Festival in CULLERA</h>
-                <a>Fri.09/08/24- Mon.12/08/24 </a>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!--SECOND CAROUSEL-->
+      <div class="carouselh">
+        <h2 class="trending">Electronic Music This Weekend</h2>
+        <a class="seeall" href="#">See All..</a>
       </div>
+      <div class="slidecarousel">
+        <div class="divcarousel" id="carouselweekend" data-events-id="2">
+          <!--JS FOR CARDS-->
+        </div>
+        <button class="prev-btn" id="prev-btn-weekend">
+          <img class="arrow" src="./assets/arrowback.png" alt="arrowback" />
+        </button>
+        <button class="next-btn" id="next-btn-weekend">
+          <img class="arrow" src="./assets/arrowfoward.png" alt="arrowfoward" />
+        </button>
+      </div>
+
+      <!--3 CAROUSEL ART & CULTURE-->
+      <div class="carouselh">
+        <h3 class="trending">Art, Museums and Culture</h3>
+        <a class="seeall" href="#">See All..</a>
+      </div>
+      <div class="slidecarousel" id="slidecarousel-art" data-events-id="3">
+        <div class="carouselart" id="carouselart">
+          <!-- JS FOR ART CARDS -->
+        </div>
+        <div class="carouselart" id="carousel-culture">
+          <!-- JS FOR CULTURE CARDS -->
+        </div>
+        <button class="prev-btn artbtn" id="prev-btn-art">
+          <img class="arrow" src="./assets/arrowback.png" alt="arrowback" />
+        </button>
+        <button class="next-btn artbtn" id="next-btn-art">
+          <img
+            class="arrow"
+            src="./assets/arrowfoward.png"
+            alt="arrowforward"
+          />
+        </button>
+      </div>
+
+      <!--NEWS SECTION-->
+      <div class="carouselh">
+        <h4 class="trending">News</h4>
+        <a class="seeall" href="#">See All..</a>
+      </div>
+      <div class="slidecarousel" id="slidecarousel-news">
+        <div class="carouselnews" id="carouselnews">
+          <!-- JS FOR NEWS CARDS -->
+        </div>
+        <button class="prev-btn" id="prev-btn-news">
+          <img class="arrow" src="./assets/arrowback.png" alt="arrowback" />
+        </button>
+        <button class="next-btn" id="next-btn-news">
+          <img
+            class="arrow"
+            src="./assets/arrowfoward.png"
+            alt="arrowforward"
+          />
+        </button>
+      </div>
+      <!-- CLUBS-MUSEUM-EVENTS -->
+      <section class="bottom-section">
+        <ul class="bottom-ul">
+          <li class="bottom-list">
+            <h4 class="bottom-h">Clubs</h4>
+            <a class="bottom-a" href="#">Clubs in Madrid</a>
+            <a class="bottom-a" href="#">Clubs in Ibiza</a>
+            <a class="bottom-a" href="#">Clubs in Dublin</a>
+            <a class="bottom-a" href="#">Clubs in Barcelona</a>
+            <a class="bottom-a" href="#">Clubs in Valencia</a>
+          </li>
+          <li class="bottom-list">
+            <h4 class="bottom-h">Museums</h4>
+            <a class="bottom-a" href="#">Museums in Madrid</a>
+            <a class="bottom-a" href="#">Museums in Berlin</a>
+            <a class="bottom-a" href="#">Museums in Dublin</a>
+            <a class="bottom-a" href="#">Museums in Barcelona</a>
+            <a class="bottom-a" href="#">Museums in Valencia</a>
+          </li>
+          <li class="bottom-list">
+            <h4 class="bottom-h">Events</h4>
+            <a class="bottom-a" href="#">Events in Madrid</a>
+            <a class="bottom-a" href="#">Events in Ibiza</a>
+            <a class="bottom-a" href="#">Events in Dublin</a>
+            <a class="bottom-a" href="#">Events in Barcelona</a>
+            <a class="bottom-a" href="#">Events in Valencia</a>
+          </li>
+        </ul>
+      </section>
+
+      <footer>
+        <div class="footer-div">
+          <!--FIRST CHILD IN FOOTER-->
+          <ul class="footer-ul eventify-app">
+            <li>
+              <a href="#section">
+                <img
+                  class="brandicon"
+                  src="./assets/fullbrand.png"
+                  alt="Eventify Logo"
+                />
+              </a>
+            </li>
+            <li>
+              <img
+                class="downloadicons"
+                src="./assets/playstore.png"
+                alt="Playstore"
+              />
+            </li>
+            <li>
+              <img
+                class="downloadicons"
+                src="./assets/appstore.png"
+                alt="Appstore"
+              />
+            </li>
+          </ul>
+          <!--SECOND CHILD IN FOOTER-->
+          <div class="footer-ul contact">
+            <form id="contact-form" class="contact-form">
+              <h2 class="footerh">Contact Us</h2>
+              <div class="top-form">
+                <input
+                  class="top-input"
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Full Name"
+                  required
+                />
+                <input
+                  class="top-input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your e-mail"
+                  required
+                />
+              </div>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Comment"
+                required
+                class="contact-text"
+              ></textarea>
+              <button class="button-form" type="submit">Send</button>
+            </form>
+          </div>
+          <!--THIRD CHILD IN FOOTER-->
+          <ul class="footer-ul follow-us">
+            <li>
+              <h4 class="footerh">Follow Us</h4>
+            </li>
+            <li>
+              <img
+                class="followusicons"
+                src="./assets/followusicons.png"
+                alt="Social Icons"
+              />
+            </li>
+          </ul>
+        </div>
+      </footer>
     </main>
   </body>
 </html>

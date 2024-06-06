@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../assets/Eventify Logo.png"
+      type="image/x-icon"
+    />
+    <title>Eventify | Event</title>
+    <!--LINK CSS-->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../fonts/stylesheet.css" />
+
+    <!--LINK GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Jersey+10&family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <!--SCRIPT JS-->
+   <script defer src="../app/data.js"></script>
+  <script defer src="../app/eventsdata.js"></script>
+  <script defer src="../app/testing.js"></script>
+    <title>Document</title>
+  </head>
+  <body class="bd">
+    <nav>
+      <div class="logonav">
+        <a href="../index.html">
+        <img
+          class="logo"
+          src="../assets/fullbrand.png"
+          alt="logo"
+          href="../index.html"
+        />
+        </a>
+      </div>
+      <div class="rightnav">
+        <ul>
+          <li>
+            <img class="profile" src="../assets/Profile.png" alt="Profile" />
+          </li>
+          <!--DROPDOWN FOR LANGUAGE-->
+          <li>
+            <div class="dropdown">
+              <button class="showicon" id="showicon">
+                <img
+                  class="lenguage"
+                  src="../assets/ENG FRAME.png"
+                  alt="english flag"
+                />
+              </button>
+              <div class="dropdown-content">
+                <a href="">
+                  <img
+                    class="lenguage"
+                    src="../assets/ENG FRAME.png"
+                    alt="english flag"
+                /></a>
+                <a href="#">
+                  <img
+                    class="lenguage"
+                    src="../assets/ESP FRAME.png"
+                    alt="spanish flag"
+                /></a>
+                <a href="#">
+                  <img
+                    class="lenguage"
+                    src="../assets/DEU FRAM.png"
+                    alt="german flag"
+                /></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+<main class="main-details">
+        <div id="events-details">
+            <h2 id="title"></h2>
+            <p id="time"></p>
+            <img id="imageUrl" src="" alt="Evento" />
+            <p id="info"></p>
+            <p id="location"></p>
+            <img id="locationUrl" src="" alt="Ubicación del evento" />
+            <p id="price"></p>
+        </div>
+
+        <a href="javascript:history.back()">Volver</a>
+    </main>
+    <footer>
+      <div class="footer-div">
+        <!--FIRST CHILD IN FOOTER-->
+        <ul class="footer-ul eventify-app">
+          <li>
+           <li>
+              <a href="../index.html">
+                <img
+                  class="brandicon"
+                  src="../assets/fullbrand.png"
+                  alt="Eventify Logo"
+                />
+              </a>
+            </li>
+          </li>
+          <li>
+            <img
+              class="downloadicons"
+              src="../assets/playstore.png"
+              alt="Playstore"
+            />
+          </li>
+          <li>
+            <img
+              class="downloadicons"
+              src="../assets/appstore.png"
+              alt="Appstore"
+            />
+          </li>
+        </ul>
+        <!--SECOND CHILD IN FOOTER-->
+        <div class="footer-ul contact">
+          <form id="contact-form" class="contact-form">
+            <h2 class="footerh">Contact Us</h2>
+            <div class="top-form">
+              <input
+                class="top-input"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Full Name"
+                required
+              />
+              <input
+                class="top-input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your e-mail"
+                required
+              />
+            </div>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Comment"
+              required
+              class="contact-text"
+            ></textarea>
+            <button class="button-form" type="submit">Send</button>
+          </form>
+        </div>
+        <!--THIRD CHILD IN FOOTER-->
+        <ul class="footer-ul follow-us">
+          <li>
+            <h4 class="footerh">Follow Us</h4>
+          </li>
+          <li>
+            <img
+              class="followusicons"
+              src="../assets/followusicons.png"
+              alt="Social Icons"
+            />
+            
+          </li>
+        </ul>
+      </div>
+    </footer>
+    
+  </body>
+</html>
