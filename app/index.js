@@ -9,11 +9,11 @@ button.addEventListener("click", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
   const images = [
-    "url(/Eventify/assets/event1.png)",
-    "url(/Eventify/assets/event2.png)",
-    "url(/Eventify/assets/event3.png)",
-    "url(/Eventify/assets/event4.png)",
-    "url(/Eventify/assets/event5.jpg)",
+    "url(../assets/event1.png)",
+    "url(../assets/event2.png)",
+    "url(../assets/event3.png)",
+    "url(../assets/event4.png)",
+    "url(../assets/event5.jpg)",
   ];
 
   let currentIndex = 0;
