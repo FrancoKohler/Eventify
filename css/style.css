@@ -334,7 +334,7 @@ body main section {
 }
 /*NEWS CAROUSEL*/
 section {
-  background-image: url("../assets/event1.png");
+  background-image: url("./assets/event1.png");
   height: 100%;
   width: 100%;
 }
