@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "url(./assets/event5.jpg)",
   ];
 
-  let currentIndex = 0;
+  let currentIndex = 1;
 
   function changeBackground() {
     const backgroundContainer = document.querySelector("#section");
