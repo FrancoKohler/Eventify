@@ -234,18 +234,18 @@ $(document).ready(function () {
     "event3.png",
     "event4.png",
     "event5.jpg",
-  ]; // List of your image filenames
+  ];
   var currentIndex = 0;
   var section = $("#section");
 
   function changeBackground() {
-    section.css("background-image", "url(assets/" + images[currentIndex] + ")");
+    var imageUrl = "assets/" + images[currentIndex];
+    console.log("Changing background to: " + imageUrl);
+    section.css("background-image", "url(" + imageUrl + ")");
     currentIndex = (currentIndex + 1) % images.length;
   }
 
-  // Show the first image immediately
   changeBackground();
 
-  // Change background every 5 seconds
   setInterval(changeBackground, 5000);
 });
