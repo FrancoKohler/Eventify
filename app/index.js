@@ -8,12 +8,12 @@ button.addEventListener("click", function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const images = [
+  /* const images = [
+    "url(./assets/event1.png)",
     "url(./assets/event2.png)",
     "url(./assets/event3.png)",
     "url(./assets/event4.png)",
     "url(./assets/event5.jpg)",
-    "url(./assets/event1.png)",
   ];
 
   let currentIndex = 0;
@@ -26,14 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Delay the initial call of changeBackground by 5000 milliseconds (5 seconds)
-  setTimeout(() => {
-    changeBackground();
-    // Set interval after the first execution
-    setInterval(changeBackground, 5000);
-  }, 5000);
-
+  
   changeBackground();
+
+  setInterval(changeBackground, 5000); */
+
   /* 1° CARROUSEL*/
   const divCarrouselContainer = document.querySelector("#divcarousel");
   const divWeekendContainer = document.querySelector("#carouselweekend");
