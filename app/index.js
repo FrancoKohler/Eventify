@@ -1,5 +1,5 @@
 /*ACTIVE DROPDOWN FOR LANGUAGE*/
-const button = document.querySelector("#showicon"); // select the button element
+const button = document.querySelector("#showicon");
 const dropdownContent = document.querySelector(".dropdown-content");
 
 button.addEventListener("click", function () {
@@ -9,7 +9,7 @@ button.addEventListener("click", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
   const images = [
-    "url(./assets/event1.png)",
+    "url(/assets/event1.png)",
     "url(./assets/event2.png)",
     "url(./assets/event3.png)",
     "url(./assets/event4.png)",
@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   setInterval(changeBackground, 5000);
+
   changeBackground();
   /* 1° CARROUSEL*/
   const divCarrouselContainer = document.querySelector("#divcarousel");
@@ -43,14 +44,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const div = document.createElement("div");
         div.classList.add("events");
         div.innerHTML = `
-        <img src="${event.imageUrl}" alt="${event.title}" class="imgcarousel">
+        <img src="${event.imageUrl}" alt="${event.title}" class="imgcarousel" >
         <div class="eventinfo">
           <h3 class="h-event">${event.title}</h3>
           <a class="p-event">${event.time}</a>
         </div>
       `;
         div.addEventListener("click", () => {
-          window.location.href = "./html/eventpage.html";
+          window.location.href = `./html/eventpage.html?id=${event.id}`;
         });
         divCarrouselContainer.append(div);
       });
@@ -72,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       `;
         div.addEventListener("click", () => {
-          window.location.href = "./html/eventpage.html";
+          window.location.href = `./html/eventpage.html?id=${weekend.id}`;
         });
         divWeekendContainer.append(div);
       });
@@ -94,14 +95,14 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       `;
         div.addEventListener("click", () => {
-          window.location.href = "./html/eventpage.html";
+          window.location.href = `./html/eventpage.html?id=${artEvent.id}`;
         });
         divArtContainer.append(div);
       });
     }
   }
 
-  function displayCultureContainer(cultureEventsList) {
+  function displayDivCulture(cultureEventsList) {
     if (divCultureContainer) {
       divCultureContainer.innerHTML = "";
 
@@ -116,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       `;
         div.addEventListener("click", () => {
-          window.location.href = "./html/eventpage.html";
+          window.location.href = `./html/eventpage.html?id=${cultureEvent.id}`;
         });
         divCultureContainer.append(div);
       });
@@ -127,18 +128,18 @@ document.addEventListener("DOMContentLoaded", () => {
     if (divNewsContainer) {
       divNewsContainer.innerHTML = "";
 
-      newsList.forEach((news) => {
+      newsList.forEach((newsItem) => {
         const div = document.createElement("div");
         div.classList.add("news");
         div.innerHTML = `
-        <img src="${news.imageUrl}" alt="${news.title}" class="img-news">
+        <img src="${newsItem.imageUrl}" alt="${newsItem.title}" class="img-news">
         <div class="news-info">
-          <h3 class="h-news">${news.title}</h3>
-          <a class="p-news">${news.content}</a>
+          <h3 class="h-news">${newsItem.title}</h3>
+          <a class="p-news">${newsItem.content}</a>
         </div>
       `;
         div.addEventListener("click", () => {
-          window.location.href = "./html/eventpage.html";
+          window.location.href = "./html/eventpage.html?id=" + newsItem.id; // Cambiado a la página de detalle de noticias
         });
         divNewsContainer.append(div);
       });
@@ -149,8 +150,8 @@ document.addEventListener("DOMContentLoaded", () => {
   displayDivCarrousel(events);
   displayDivWeekend(weekends);
   displayArtContainer(artEvents);
-  displayCultureContainer(cultureEvents);
-  displayNewsContainer(news);
+  displayDivCulture(cultureEvents);
+  displayNewsContainer(newsItem);
 });
 
 /*SLIDE CAROUSEL*/
@@ -217,19 +218,19 @@ setupCarousel(
 document
   .getElementById("contact-form")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // PREVENTS EVENT STARTUP
+    event.preventDefault(); /* PREVENTS EVENT STARTUP */
 
-    // GETS FORM ITEMS FROM THE DOC
+    /* GETS FORM ITEMS FROM THE DOC */
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
 
-    // ACTION IS SENT TO THE SERVERS
+    /*  ACTION IS SENT TO THE SERVERS */
     console.log("Nombre:", name);
     console.log("Email:", email);
     console.log("Mensaje:", message);
 
-    //SUCCESS TEXT
+    /* SUCCESS TEXT */
 
     Swal.fire({
       icon: "success",
@@ -242,7 +243,6 @@ document
         confirmButton: "my-confirm-button",
       },
     });
-    // RESETS FORM
+    /* RESETS FORM */
     document.getElementById("contact-form").reset();
   });
-/*EVENT*/

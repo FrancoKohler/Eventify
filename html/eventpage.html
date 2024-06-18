@@ -10,7 +10,7 @@
     />
     <title>Eventify | Event</title>
     <!--LINK CSS-->
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/styledetail.css" />
     <link rel="stylesheet" href="../fonts/stylesheet.css" />
 
     <!--LINK GOOGLE FONTS-->
@@ -20,13 +20,12 @@
       href="https://fonts.googleapis.com/css2?family=Audiowide&family=Jersey+10&family=Press+Start+2P&family=VT323&display=swap"
       rel="stylesheet"
     />
-    <!--SCRIPT JS-->
-   <script defer src="../app/data.js"></script>
-  <script defer src="../app/eventsdata.js"></script>
-  <script defer src="../app/testing.js"></script>
+     <!--SWEET ALERT-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
     <title>Document</title>
   </head>
-  <body class="bd">
+  <body class="body-page">
     <nav>
       <div class="logonav">
         <a href="../index.html">
@@ -78,19 +77,57 @@
         </ul>
       </div>
     </nav>
-<main class="main-details">
+    <main>
+    <section class="main-details" id="main-details">
+    <div class="event-container">
         <div id="events-details">
-            <h2 id="title"></h2>
-            <p id="time"></p>
-            <img id="imageUrl" src="" alt="Evento" />
-            <p id="info"></p>
-            <p id="location"></p>
-            <img id="locationUrl" src="" alt="Ubicación del evento" />
-            <p id="price"></p>
+            <div class="event-general">
+                <img class="event-image" id="imageUrlDt" src="" alt="Evento" />
+                <div class="event-main-info">
+                    <h2 class="event-title" id="title"></h2>
+                    <p class="event-time" id="time"></p>
+                    <!--TAB FOR NAVIGATING INSIDE THE HTML-->
+                    <div class="event-subinfo">
+                        <a class="sub-info" id="main" href="#">Main</a>
+                        <a class="sub-info" id="main" href="#infoTab">Info</a>
+                        <a class="sub-info" id="main-location" href="#locationTab">Location</a>
+                        <a class="sub-info" id="main-tickets" href="#ticketsTab">Tickets</a>
+                    </div>
+                    <section class="other-info" id="otherInfo">
+                        <!--FILL IN JS-->
+                    </section>
+                </div>
+            </div>
+            <!--INFO TAB-->
+            <div class="div-info-location" id="infoTab">
+              <h3 class="h-location" >Info</h3>
+              <div class="div-info">
+                <p class="event-info" id="info"></p>
+                <p class="event-time" id="timeInfo"></p>
+              </div>
+            </div>
+            <!--LOCATION TAB-->
+            <div id="locationTab" class="div-info-location">
+              <h4 class="h-location">Location</h4>
+              <div class="div-location">
+                <img class="event-logo" id="logoUrl" src="" alt="Ubicación del evento" />
+                <p class="event-location" id="location"></p>
+                <img class="event-location-img" id="locationUrl" src="" alt="Ubicación del evento" />
+              </div>
+            </div>
+            <!--TICKETS TAB-->
+           <div class="div-ticket" id="ticketsTab">
+            <h5 class="h-location">Tickets</h5>
+            <div class="prices-container" id="pricesContainer">
+              <!--FILLED IN JS-->
+            </div>
+            <button class="button-ticket" id="buyTicketsBtn">Buy Tickets</button>
+           </div>
         </div>
-
-        <a href="javascript:history.back()">Volver</a>
-    </main>
+    </div>
+    
+</section>
+</main>
     <footer>
       <div class="footer-div">
         <!--FIRST CHILD IN FOOTER-->
@@ -170,6 +207,9 @@
         </ul>
       </div>
     </footer>
-    
+     <!--SCRIPT JS-->
+   <script defer src="../app/data.js"></script>
+  <script defer src="../app/eventsdata.js"></script>
+  <script defer src="../app/index.js"></script>
   </body>
 </html>

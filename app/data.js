@@ -4,13 +4,66 @@ const events = [
     id: "charlie",
     title: "Charlie Sparks in SPOOK CLUB",
     imageUrl: "./assets/SpookSparks.webp",
+    imageUrlDt: "../assets/SpookSparks.webp",
     time: "Sat. 27/04/24 | 23:00-7:30",
+    timeInfo: "MINIMUN AGE: +18 <br>OPENING HOURS:23:00</br>",
+    logoUrl: "../assets/spooklogo.jpg",
+    subInfos: [
+      {
+        image: "../assets/charlie_sparks.jpg",
+        main: "CHARLIE SPARKS",
+        low: "TECHNO",
+      },
+      {
+        image: "../assets/LuciaGea.jpeg",
+        main: "LUCIA GEA",
+        low: "TECHNO",
+      },
+      {
+        image: "../assets/djbadtrip.jpg",
+        main: "DJ BADRTRIP",
+        low: "TECHNO",
+      },
+    ],
+    prices: [
+      {
+        title: "BACKSTAGE TICKET",
+        price: "55,00€",
+      },
+      {
+        title: "REGULAR TICKET 2",
+        price: "35,00€",
+      },
+      {
+        title: "REGULAR TICKET",
+        price: "25,00 €",
+      },
+    ],
+    info: "SPOOK: Charlie Sparks + Dj Badtrip + Lucia Gea + AAA+ B2B ketavist",
+    location: "SPOOK CLUB Carretera del Rio, 399, Pinedo, Valencia, España",
+    locationUrl: "../assets/eventdetails/spooklocation.png",
   },
   {
     id: "zevra",
     title: "Zevra Festival in CULLERA",
     imageUrl: "./assets/ZevraFestival.png",
+    imageUrlDt: "../assets/ZevraFestival.png",
+    logoUrl: "../assets/spooklogo.jpg",
     time: "Fri.19/08/24 - Mon.22/08/24 ",
+    subInfos: [
+      {
+        image: "../assets/manuelturizo.jpg",
+        main: "Manuel Turizo",
+      },
+      {
+        image: "../assets/beret.jpeg",
+        main: "Beret",
+      },
+    ],
+
+    info: "Zevra Festival with a 100+ artists",
+    location: "Plaça Numero 22, 74, 46400 Cullera,",
+    locationUrl: "../assets/eventdetails/zevralocation.png",
   },
   {
     id: "montanejos",
@@ -124,7 +177,7 @@ const cultureEvents = [
   },
 ];
 
-const news = [
+const newsItem = [
   {
     id: "destinies",
     title: "Top 5-Partying Destinies",
