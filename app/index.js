@@ -9,14 +9,14 @@ button.addEventListener("click", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
   const images = [
-    "url(./assets/event1.png)",
     "url(./assets/event2.png)",
     "url(./assets/event3.png)",
     "url(./assets/event4.png)",
     "url(./assets/event5.jpg)",
+    "url(./assets/event1.png)",
   ];
 
-  let currentIndex = 1;
+  let currentIndex = 0;
 
   function changeBackground() {
     const backgroundContainer = document.querySelector("#section");
@@ -26,7 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  setInterval(changeBackground, 5000);
+  // Delay the initial call of changeBackground by 5000 milliseconds (5 seconds)
+  setTimeout(() => {
+    changeBackground();
+    // Set interval after the first execution
+    setInterval(changeBackground, 5000);
+  }, 5000);
 
   changeBackground();
   /* 1° CARROUSEL*/
