@@ -8,29 +8,6 @@ button.addEventListener("click", function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  /* const images = [
-    "url(./assets/event1.png)",
-    "url(./assets/event2.png)",
-    "url(./assets/event3.png)",
-    "url(./assets/event4.png)",
-    "url(./assets/event5.jpg)",
-  ];
-
-  let currentIndex = 0;
-
-  function changeBackground() {
-    const backgroundContainer = document.querySelector("#section");
-    if (backgroundContainer) {
-      backgroundContainer.style.backgroundImage = images[currentIndex];
-      currentIndex = (currentIndex + 1) % images.length;
-    }
-  }
-
-  
-  changeBackground();
-
-  setInterval(changeBackground, 5000); */
-
   /* 1° CARROUSEL*/
   const divCarrouselContainer = document.querySelector("#divcarousel");
   const divWeekendContainer = document.querySelector("#carouselweekend");
