@@ -227,9 +227,9 @@ document
   });
 
 /*BG IMG INTERVAL*/
-$(document).ready(function () {
+/* $(document).ready(function () {
   var images = [
-    "festival.png",
+    "evento.jpg",
     "event2.png",
     "event3.png",
     "event4.png",
@@ -249,3 +249,4 @@ $(document).ready(function () {
 
   setInterval(changeBackground, 5000);
 });
+ */
