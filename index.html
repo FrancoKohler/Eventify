@@ -80,41 +80,43 @@
     </nav>
     <main>
       <!--Top Section with changing BG-->
-      <section class="section-main" id="section">
-        <header class="having">Having fun was never this easy!</header>
-        <!--SEARCHING TAB-->
-        <div class="searchtab">
-          <div>
-            <label for="city" class="search">City</label>
-            <select name="city" id="city" class="city">
-              <option value="valencia">Valencia</option>
-              <option value="barcelona">Barcelona</option>
-              <option value="madrid">Madrid</option>
-              <option value="lisboa">Lisboa</option>
-              <option value="berlin">Berlin</option>
-            </select>
+      <section>
+        <div class="section-main" id="section">
+          <header class="having">Having fun was never this easy!</header>
+          <!--SEARCHING TAB-->
+          <div class="searchtab">
+            <div>
+              <label for="city" class="search">City</label>
+              <select name="city" id="city" class="city">
+                <option value="valencia">Valencia</option>
+                <option value="barcelona">Barcelona</option>
+                <option value="madrid">Madrid</option>
+                <option value="lisboa">Lisboa</option>
+                <option value="berlin">Berlin</option>
+              </select>
+            </div>
+            <div>
+              <label for="category" class="search">Category</label>
+              <select name="category" id="category" class="city">
+                <option value="electronic">Electronic Music</option>
+                <option value="art">Art, Museums and Culture</option>
+              </select>
+            </div>
+            <div>
+              <label for="start" class="search">Start date</label>
+              <input
+                class="date"
+                type="date"
+                id="start"
+                name="trip-start"
+                value="2024-04-25"
+                min="2024-02-01"
+                max="2026-10-31"
+              />
+            </div>
           </div>
-          <div>
-            <label for="category" class="search">Category</label>
-            <select name="category" id="category" class="city">
-              <option value="electronic">Electronic Music</option>
-              <option value="art">Art, Museums and Culture</option>
-            </select>
-          </div>
-          <div>
-            <label for="start" class="search">Start date</label>
-            <input
-              class="date"
-              type="date"
-              id="start"
-              name="trip-start"
-              value="2024-04-25"
-              min="2024-02-01"
-              max="2026-10-31"
-            />
-          </div>
+          <button class="gosearch">GO</button>
         </div>
-        <button class="gosearch">GO</button>
       </section>
       <!--FIRST CAROUSEL-->
       <div class="carouselh">
