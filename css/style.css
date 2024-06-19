@@ -115,7 +115,7 @@ body {
 .section-main {
   height: 615px;
   background-size: cover;
-  background-image: url(../assets/event1.png);
+
   background-repeat: no-repeat;
   transition: background-image 1200ms ease;
 }
