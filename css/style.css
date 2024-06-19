@@ -105,7 +105,7 @@ nav .rightnav ul li .profile {
   display: block;
 }
 .dropdown-content a:hover {
-  border: 0.5px solid #d9ff02;
+  border: 0.5px solid rgb(229, 248, 118);
   border-radius: 1rem;
 }
 .dropdown:active .dropdown-content {
@@ -289,15 +289,15 @@ body {
   cursor: pointer;
   border-radius: 15px;
   background-color: #ffffff;
-  -webkit-box-shadow: 4px 6px 0px 4px #d9ff02;
-  -moz-box-shadow: 4px 6px 0px 4px #d9ff02;
-  box-shadow: 2px 2px 0px 2px #d9ff02;
+  -webkit-box-shadow: 4px 6px 0px 4px rgb(229, 248, 118);
+  -moz-box-shadow: 4px 6px 0px 4px rgb(229, 248, 118);
+  box-shadow: 2px 2px 0px 2px rgb(229, 248, 118);
   transition: 0.5s;
 }
 .events:hover {
-  -webkit-box-shadow: 0px 0px 4px 4px #d9ff02;
-  -moz-box-shadow: 0px 0px 4px 4px #d9ff02;
-  box-shadow: 0px 0px 4px 4px #d9ff02;
+  -webkit-box-shadow: 0px 0px 4px 4px rgb(229, 248, 118);
+  -moz-box-shadow: 0px 0px 4px 4px rgb(229, 248, 118);
+  box-shadow: 0px 0px 4px 4px rgb(229, 248, 118);
 }
 
 .imgcarousel {
@@ -433,8 +433,8 @@ footer {
   width: 100%;
   height: fit-content;
   background-color: #000000;
-  border-top: 1px solid #d9ff02;
-  border-bottom: 1px solid #d9ff02;
+  border-top: 1px solid rgb(229, 248, 118);
+  border-bottom: 1px solid rgb(229, 248, 118);
   margin-top: 2rem;
   display: flex;
 }
@@ -529,7 +529,7 @@ footer {
   cursor: pointer;
 }
 .button-form:hover {
-  border: 1px solid #d9ff02;
+  border: 1px solid rgb(229, 248, 118);
 }
 /*THIRD CHILD*/
 .follow-us {
