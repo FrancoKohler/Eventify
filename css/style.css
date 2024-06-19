@@ -116,7 +116,7 @@ body main section {
   height: 615px;
   background-size: cover;
   background-repeat: no-repeat;
-  transition: background-image 1200ms linear;
+  transition: background-image 1200ms ease;
 }
 /*MAIN CENTRED SEARCH TAB*/
 .having {

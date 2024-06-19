@@ -229,7 +229,7 @@ document
 /*BG IMG INTERVAL*/
 $(document).ready(function () {
   var images = [
-    "event1.png",
+    "festival.png",
     "event2.png",
     "event3.png",
     "event4.png",
