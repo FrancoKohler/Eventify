@@ -1,3 +1,14 @@
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: rgba(0, 0, 0, 0.8);
+  --clr-primary-2: #160c25;
+  --clr-dropshadow: rgb(229, 248, 118);
+  --clr-secondary-2: #007aff;
+  --clr-secondary-3: #daedff;
+  --font-primary: "Nunito", sans-serif;
+  --font-size-primary: 50px;
+}
+
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0px;
@@ -7,6 +18,7 @@ html,
 body {
   height: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
@@ -31,7 +43,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 50;
+  z-index: 10;
 }
 .logonav {
   display: flex;
@@ -105,7 +117,7 @@ nav .rightnav ul li .profile {
   display: block;
 }
 .dropdown-content a:hover {
-  border: 0.5px solid rgb(229, 248, 118);
+  border: 0.5px solid var(--clr-dropshadow);
   border-radius: 1rem;
 }
 .dropdown:active .dropdown-content {
@@ -150,9 +162,9 @@ body {
   display: flex;
   flex-direction: row;
   grid-template-columns: repeat(3, 1fr);
-  -webkit-box-shadow: 4px 6px 0px 4px rgb(229, 248, 118);
-  -moz-box-shadow: 4px 6px 0px 4px rgb(229, 248, 118);
-  box-shadow: 4px 6px 0px 4px rgb(229, 248, 118);
+  -webkit-box-shadow: 4px 6px 0px 4px var(--clr-dropshadow);
+  -moz-box-shadow: 4px 6px 0px 4px var(--clr-dropshadow);
+  box-shadow: 4px 6px 0px 4px rvar(--clr-dropshadow);
 }
 .searchtab div {
   display: flex;
@@ -199,9 +211,9 @@ body {
   border: #ffffff solid 1px;
   background-color: #ffffff;
   color: #000000;
-  -webkit-box-shadow: 4px 6px 0px 4px rgb(229, 248, 118);
-  -moz-box-shadow: 4px 6px 0px 4px rgb(229, 248, 118);
-  box-shadow: 2px 2px 0px 2px rgb(229, 248, 118);
+  -webkit-box-shadow: 4px 6px 0px 4px var(--clr-dropshadow);
+  -moz-box-shadow: 4px 6px 0px 4px var(--clr-dropshadow);
+  box-shadow: 2px 2px 0px 2px var(--clr-dropshadow);
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -223,9 +235,9 @@ body {
   width: 5%;
   border-radius: 1rem;
   background: #070707;
-  -webkit-box-shadow: 2px 2px 0px 2px rgb(229, 248, 118);
-  -moz-box-shadow: 2px 2px 0px 2px rgb(229, 248, 118);
-  box-shadow: 2px 2px 0px 2px rgb(229, 248, 118);
+  -webkit-box-shadow: 2px 2px 0px 2px var(--clr-dropshadow);
+  -moz-box-shadow: 2px 2px 0px 2px var(--clr-dropshadow);
+  box-shadow: 2px 2px 0px 2px var(--clr-dropshadow);
   padding: 10px 20px;
   border: none;
   cursor: pointer;
@@ -289,15 +301,15 @@ body {
   cursor: pointer;
   border-radius: 15px;
   background-color: #ffffff;
-  -webkit-box-shadow: 4px 6px 0px 4px rgb(229, 248, 118);
-  -moz-box-shadow: 4px 6px 0px 4px rgb(229, 248, 118);
-  box-shadow: 2px 2px 0px 2px rgb(229, 248, 118);
+  -webkit-box-shadow: 4px 6px 0px 4px var(--clr-dropshadow);
+  -moz-box-shadow: 4px 6px 0px 4px var(--clr-dropshadow);
+  box-shadow: 2px 2px 0px 2px var(--clr-dropshadow);
   transition: 0.5s;
 }
 .events:hover {
-  -webkit-box-shadow: 0px 0px 4px 4px rgb(229, 248, 118);
-  -moz-box-shadow: 0px 0px 4px 4px rgb(229, 248, 118);
-  box-shadow: 0px 0px 4px 4px rgb(229, 248, 118);
+  -webkit-box-shadow: 0px 0px 4px 4px var(--clr-dropshadow);
+  -moz-box-shadow: 0px 0px 4px 4px var(--clr-dropshadow);
+  box-shadow: 0px 0px 4px 4px var(--clr-dropshadow);
 }
 
 .imgcarousel {
@@ -367,15 +379,15 @@ section {
   cursor: pointer;
   border-radius: 1rem;
   background-color: #ffffff;
-  -webkit-box-shadow: 4px 6px 0px 4px rgb(229, 248, 118);
-  -moz-box-shadow: 4px 6px 0px 4px rgb(229, 248, 118);
-  box-shadow: 2px 2px 0px 2px rgb(229, 248, 118);
+  -webkit-box-shadow: 4px 6px 0px 4px var(--clr-dropshadow);
+  -moz-box-shadow: 4px 6px 0px 4px var(--clr-dropshadow);
+  box-shadow: 2px 2px 0px 2px var(--clr-dropshadow);
   transition: 0.5s;
 }
 .news:hover {
-  -webkit-box-shadow: 0px 0px 4px 4px rgb(229, 248, 118);
-  -moz-box-shadow: 0px 0px 4px 4px rgb(229, 248, 118);
-  box-shadow: 0px 0px 4px 4px rgb(229, 248, 118);
+  -webkit-box-shadow: 0px 0px 4px 4px var(--clr-dropshadow);
+  -moz-box-shadow: 0px 0px 4px 4px var(--clr-dropshadow);
+  box-shadow: 0px 0px 4px 4px var(--clr-dropshadow);
 }
 .img-news {
   width: 100%;
@@ -433,8 +445,8 @@ footer {
   width: 100%;
   height: fit-content;
   background-color: #000000;
-  border-top: 1px solid rgb(229, 248, 118);
-  border-bottom: 1px solid rgb(229, 248, 118);
+  border-top: 1px solid var(--clr-dropshadow);
+  border-bottom: 1px solid var(--clr-dropshadow);
   margin-top: 2rem;
   display: flex;
 }
@@ -529,7 +541,7 @@ footer {
   cursor: pointer;
 }
 .button-form:hover {
-  border: 1px solid rgb(229, 248, 118);
+  border: 1px solid var(--clr-dropshadow);
 }
 /*THIRD CHILD*/
 .follow-us {
@@ -546,10 +558,10 @@ footer {
 /*SWEET ALERT*/
 .my-popup {
   background-color: #000000;
-  border: 1px solid rgb(229, 248, 118) !important;
-  -webkit-box-shadow: 0px 0px 4px 4px rgb(229, 248, 118) !important;
-  -moz-box-shadow: 0px 0px 4px 4px rgb(229, 248, 118) !important;
-  box-shadow: 0px 0px 4px 4px rgb(229, 248, 118) !important;
+  border: 1px solid var(--clr-dropshadow) !important;
+  -webkit-box-shadow: 2px 4px 0px 4px var(--clr-dropshadow) !important;
+  -moz-box-shadow: 2px 4px 0px 4px var(--clr-dropshadow) !important;
+  box-shadow: 2px 4px 0px 4px var(--clr-dropshadow) !important;
 }
 .my-title,
 .my-text {
@@ -560,8 +572,8 @@ footer {
 }
 .my-confirm-button {
   background-color: #000000 !important;
-  border: 1px solid rgb(229, 248, 118) !important;
-  -webkit-box-shadow: 0px 0px 4px 4px rgb(229, 248, 118) !important;
-  -moz-box-shadow: 0px 0px 4px 4px rgb(229, 248, 118) !important;
-  box-shadow: 0px 0px 4px 4px rgb(229, 248, 118) !important;
+  border: 1px solid var(--clr-dropshadow) !important;
+  -webkit-box-shadow: 2px 4px 0px 4px var(--clr-dropshadow) !important;
+  -moz-box-shadow: 2px 4px 0px 4px var(--clr-dropshadow) !important;
+  box-shadow: 2px 4px 0px 4px var(--clr-dropshadow) !important;
 }

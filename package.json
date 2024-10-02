@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "pdf-lib": "^1.17.1",
     "sweetalert2": "^11.11.0"
   }
 }

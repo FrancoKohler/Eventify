@@ -4,15 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const weekendId = urlParams.get("weekendId");
   const artEventId = urlParams.get("artEventId");
   const cultureEventId = urlParams.get("cultureEventId");
-  const newsId = urlParams.get("newsId");
-
   const event = events.find((event) => event.id === eventId);
   const weekend = weekends.find((weekend) => weekend.id === weekendId);
   const artEvent = artEvents.find((artEvent) => artEvent.id === artEventId);
   const cultureEvent = cultureEvents.find(
     (cultureEvent) => cultureEvent.id === cultureEventId
   );
-  const news = newsItem.find((news) => news.id === newsId);
 
   if (event) {
     populateEventData(event, events);
@@ -22,8 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
     populateArtEventData(artEvent);
   } else if (cultureEvent) {
     populateCultureEventData(cultureEvent);
-  } else if (news) {
-    populateNewsData(news);
   }
 
   function populateEventData(event, events) {
@@ -114,13 +109,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("imageUrlDt").src = cultureEvent.imageUrl;
     // Update other culture event details as needed
   }
-
-  function populateNewsData(news) {
-    document.getElementById("title").textContent = news.title;
-    document.getElementById("info").textContent = news.content;
-    document.getElementById("imageUrlDt").src = news.imageUrl;
-    // Update other news details as needed
-  }
 });
 /*BUTTON FOR BUY*/
 document.addEventListener("DOMContentLoaded", function () {
@@ -128,7 +116,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   buyTicketsBtn.addEventListener("click", function () {
     Swal.fire({
-      icon: "error",
       title: "This feature is not yet available",
       text: "Came back later",
       customClass: {
@@ -140,3 +127,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+function getUrlParameter(name) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(name);
+}
+
+// Obtener el ID del parámetro de la URL
+const newsId = getUrlParameter("id");
+
+// Buscar el artículo de noticias por ID y poblar la página
+const newsItem = newsItems.find((item) => item.id === newsId);
+if (newsItem) {
+  document.getElementById("title").textContent = newsItem.title;
+  document.getElementById("content").textContent = newsItem.content;
+  document.getElementById("destinie1").textContent = newsItem.destinieOneHeader;
+  document.getElementById("pdestinie1").textContent = newsItem.destinieOneP;
+  document.getElementById("img1").src = newsItem.imageOne;
+  document.getElementById("destinie2").textContent = newsItem.destinieTwoHeader;
+  document.getElementById("pdestinie2").textContent = newsItem.destinieTwoP;
+  document.getElementById("img2").src = newsItem.imageTwo;
+  document.getElementById("destinie3").textContent =
+    newsItem.destinieThreeHeader;
+  document.getElementById("pdestinie3").textContent = newsItem.destinieThreeP;
+  document.getElementById("img3").src = newsItem.imageThree;
+  document.getElementById("destinie4").textContent =
+    newsItem.destinieFourHeader;
+  document.getElementById("pdestinie4").textContent = newsItem.destinieFourP;
+  document.getElementById("img4").src = newsItem.imageFour;
+  document.getElementById("destinie5").textContent =
+    newsItem.destinieFiveHeader;
+  document.getElementById("pdestinie5").textContent = newsItem.destinieFiveP;
+  document.getElementById("img5").src = newsItem.imageFive;
+} else {
+  console.error(
+    "No se encontró ningún artículo de noticias con el ID especificado."
+  );
+}

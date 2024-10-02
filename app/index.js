@@ -29,8 +29,29 @@ document.addEventListener("DOMContentLoaded", () => {
           <a class="p-event">${event.time}</a>
         </div>
       `;
-        div.addEventListener("click", () => {
-          window.location.href = `./html/eventpage.html?id=${event.id}`;
+        div.addEventListener("click", (e) => {
+          // Comprueba si el ID es 'charlie'
+          if (
+            event.id === "charlie" ||
+            event.id === "zevra" ||
+            event.id === "medusa" ||
+            event.id === "montanejos"
+          ) {
+            window.location.href = `./html/eventpage.html?id=${event.id}`; // Permite la navegación
+          } else {
+            // Alerta que impide la navegación
+            e.preventDefault(); // Evitar la redirección
+            Swal.fire({
+              title: "This feature is not yet available",
+              text: "Came back later",
+              customClass: {
+                popup: "my-popup",
+                title: "my-title",
+                text: "my-text",
+                confirmButton: "my-confirm-button",
+              },
+            });
+          }
         });
         divCarrouselContainer.append(div);
       });
@@ -45,14 +66,31 @@ document.addEventListener("DOMContentLoaded", () => {
         const div = document.createElement("div");
         div.classList.add("events");
         div.innerHTML = `
-        <img src="${weekend.imageUrl}" alt="${weekend.title}" class="imgcarousel">
-        <div class="eventinfo">
-          <h3 class="h-event">${weekend.title}</h3>
-          <a class="p-event">${weekend.time}</a>
-        </div>
-      `;
-        div.addEventListener("click", () => {
-          window.location.href = `./html/eventpage.html?id=${weekend.id}`;
+          <img src="${weekend.imageUrl}" alt="${weekend.title}" class="imgcarousel">
+          <div class="eventinfo">
+            <h3 class="h-event">${weekend.title}</h3>
+            <a class="p-event">${weekend.time}</a>
+          </div>
+        `;
+
+        div.addEventListener("click", (event) => {
+          // Comprueba si el ID es 'charlie'
+          if (weekend.id === "charlie") {
+            window.location.href = `./html/eventpage.html?id=${weekend.id}`; // Permite la navegación
+          } else {
+            // Alerta que impide la navegación
+            event.preventDefault(); // Evitar la redirección
+            Swal.fire({
+              title: "This feature is not yet available",
+              text: "Came back later",
+              customClass: {
+                popup: "my-popup",
+                title: "my-title",
+                text: "my-text",
+                confirmButton: "my-confirm-button",
+              },
+            });
+          }
         });
         divWeekendContainer.append(div);
       });
@@ -73,8 +111,19 @@ document.addEventListener("DOMContentLoaded", () => {
           <a class="p-event">${artEvent.time}</a>
         </div>
       `;
-        div.addEventListener("click", () => {
-          window.location.href = `./html/eventpage.html?id=${artEvent.id}`;
+        div.addEventListener("click", (event) => {
+          // Alerta que impide la navegación
+          event.preventDefault(); // Evitar la redirección
+          Swal.fire({
+            title: "This feature is not yet available",
+            text: "Came back later",
+            customClass: {
+              popup: "my-popup",
+              title: "my-title",
+              text: "my-text",
+              confirmButton: "my-confirm-button",
+            },
+          });
         });
         divArtContainer.append(div);
       });
@@ -95,8 +144,19 @@ document.addEventListener("DOMContentLoaded", () => {
           <a class="p-event">${cultureEvent.time}</a>
         </div>
       `;
-        div.addEventListener("click", () => {
-          window.location.href = `./html/eventpage.html?id=${cultureEvent.id}`;
+        div.addEventListener("click", (event) => {
+          // Alerta que impide la navegación
+          event.preventDefault(); // Evitar la redirección
+          Swal.fire({
+            title: "This feature is not yet available",
+            text: "Came back later",
+            customClass: {
+              popup: "my-popup",
+              title: "my-title",
+              text: "my-text",
+              confirmButton: "my-confirm-button",
+            },
+          });
         });
         divCultureContainer.append(div);
       });
@@ -111,14 +171,29 @@ document.addEventListener("DOMContentLoaded", () => {
         const div = document.createElement("div");
         div.classList.add("news");
         div.innerHTML = `
-        <img src="${newsItem.imageUrl}" alt="${newsItem.title}" class="img-news">
-        <div class="news-info">
-          <h3 class="h-news">${newsItem.title}</h3>
-          <a class="p-news">${newsItem.content}</a>
-        </div>
-      `;
-        div.addEventListener("click", () => {
-          window.location.href = "./html/eventpage.html?id=" + newsItem.id; // Cambiado a la página de detalle de noticias
+                <img src="${newsItem.imageUrl}" alt="${newsItem.title}" class="img-news">
+                <div class="news-info">
+                    <h3 class="h-news">${newsItem.title}</h3>
+                    <a class="p-news">${newsItem.content}</a>
+                </div>
+            `;
+        div.addEventListener("click", (event) => {
+          if (newsItem.id === "destinies") {
+            // Navegar a newspage.html con el ID como parámetro
+            window.location.href = `./html/newspage.html?id=${newsItem.id}`;
+          } else {
+            event.preventDefault(); // Evitar la redirección
+            Swal.fire({
+              title: "This feature is not yet available",
+              text: "Come back later",
+              customClass: {
+                popup: "my-popup",
+                title: "my-title",
+                text: "my-text",
+                confirmButton: "my-confirm-button",
+              },
+            });
+          }
         });
         divNewsContainer.append(div);
       });
@@ -130,7 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
   displayDivWeekend(weekends);
   displayArtContainer(artEvents);
   displayDivCulture(cultureEvents);
-  displayNewsContainer(newsItem);
+  displayNewsContainer(newsItems);
 });
 
 /*SLIDE CAROUSEL*/
@@ -212,7 +287,6 @@ document
     /* SUCCESS TEXT */
 
     Swal.fire({
-      icon: "success",
       title: "Thank you for reaching us",
       text: "We will be in touch with you soon. ",
       customClass: {
